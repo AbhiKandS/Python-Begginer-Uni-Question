@@ -1,24 +1,39 @@
-import math
+import math, re
 
-def isReal(s):
-    import re
+isFloat =r'^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$'
+isPositiveFloat =r'^[+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$'
+isInt =r'^[-+]?[0-9]+(\.[0]+)?$'
+
+def isValid(ValidationType, s):
     s = str(s)
-    p =r'^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$'
-    return True if re.match(p,s) else False
+    ValidationType = str(ValidationType)
+    ValidationType = ValidationType.lower()
 
-def isInt(s):
-    import re
-    s = str(s)
-    p =r'^[-+]?[0-9]+$'
-    return True if re.match(p,s) else False
+    if ValidationType in ("f","float", "1"):
+        return bool(re.match(isFloat, s))
+    
+    elif ValidationType in ("pf","+float", "2"):
+        return bool(re.match(isPositiveFloat,s))
+    
+    elif ValidationType in ("i", "int", "3"):
+        return bool(re.match(isInt, s))
 
-def isPositiveReal(s):
-    import re
-    s = str(s)
-    p =r'^[+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$'
-    return True if re.match(p,s) else False
+'''    
+def get(ValidationType, userPrompt):
+    while 1:
+        userInput = input(userPrompt)
+
+        if ValidationType in ("f","float", "1"):
+            if isValid("f", userInput):
+                return float(userInput)
 
 
+        elif ValidationType in ("pf","+float", "2"):
+            return bool(re.match(isPositiveFloat,s))
+
+        elif ValidationType in ("i", "int", "3"):
+            return bool(re.match(isInt, s))
+'''
 
 
 
@@ -27,8 +42,8 @@ def isPositiveReal(s):
 def getInt(s):
     while 1:
         outputString = input(s)
-        if isInt(outputString):
-            return int(outputString)
+        if isValid("i", outputString):
+            return int(round(float(outputString)))
 
 def getWhole(s):
     while 1:
@@ -39,13 +54,13 @@ def getWhole(s):
 def getFloat(s):
     while 1:
         outputString = input(s)
-        if isReal(outputString):
+        if isValid("f", outputString):
             return float(outputString)
 
 def getPositiveRealNumber(userPrompt):
     while 1:
         outputString = input(userPrompt)
-        if isPositiveReal(outputString):
+        if isValid("pf", outputString):
             return float(outputString)
 
 def modulus(s):
