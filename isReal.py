@@ -18,23 +18,6 @@ def isValid(ValidationType, s):
     elif ValidationType in ("i", "int", "3"):
         return bool(re.match(isInt, s))
 
-'''    
-def get(ValidationType, userPrompt):
-    while 1:
-        userInput = input(userPrompt)
-
-        if ValidationType in ("f","float", "1"):
-            if isValid("f", userInput):
-                return float(userInput)
-
-
-        elif ValidationType in ("pf","+float", "2"):
-            return bool(re.match(isPositiveFloat,s))
-
-        elif ValidationType in ("i", "int", "3"):
-            return bool(re.match(isInt, s))
-'''
-
 
 
 
