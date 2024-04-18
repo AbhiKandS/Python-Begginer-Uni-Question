@@ -66,13 +66,17 @@ delete a element from the desired position from the array.
 
 Q18) Using Filter function, write a program to filter the elements which are
 greater than 9.
+
 Q19) Using Filter function, write a program to display multiple of 5 from a
 given array.
+
 Q20) Write a Program to create a file called “Input.txt”, perform the
 write/read operation in it with a string “Computer Science”.
+
 Q21) Write a Program to create a file called “Input.txt”, initialize it with a
 string of your choice and perform the read operation to read only the first
 3 characters from the file.
+
 Q22) Using NumPy, write a program to create 1 Dim Array, load it with
 numbers, and perform the operation of Iteration and Slicing on it.
 Q23) Using NumPy, write a program to create Multi-Dim Array, load it with
