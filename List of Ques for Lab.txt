@@ -79,12 +79,14 @@ string of your choice and perform the read operation to read only the first
 
 Q22) Using NumPy, write a program to create 1 Dim Array, load it with
 numbers, and perform the operation of Iteration and Slicing on it.
+
 Q23) Using NumPy, write a program to create Multi-Dim Array, load it with
 the numbers and display the content of it.
 
 Q24) Using NumPy, write a program to create two 1 Dim Array and
 perform the operation of Iteration, Sorting the contents of array and
 concatenating the contents of the array.
+
 Q25) Using NumPy, initialize the array and display their dimensionality.
 Q26) Using Panda, create a DataFrame, initialize it with the contents such
 as : your Enrollment Number and Name and display them.

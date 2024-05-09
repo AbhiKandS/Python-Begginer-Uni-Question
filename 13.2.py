@@ -1,11 +1,14 @@
 import isReal
 
-def fib(a,b,c):
-    if a<=c:
+
+def fib(a, b, c, i):
+    if a <= c:
         print(f"{a}, ", end="")
-        return fib(b, a+b, c)
+        i = i + 1
+        fib(b, a+b, c, i)
     else:
-        return 0
+        print(i)
+
 
 fibbonacciTill = isReal.getPositiveRealNumber("Print Fibbonacci till: ")
-fib(0,1,fibbonacciTill)
+fib(0, 1, fibbonacciTill, 0)

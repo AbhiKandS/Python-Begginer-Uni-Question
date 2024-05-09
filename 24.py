@@ -7,7 +7,7 @@ print("a. Iteration")
 for i in range(2):
     b1 = a1 if (i == 0) else a2
     for j in b1:
-        print(f"{j}, ", end="")
+        print(f" {j},", end="")
         b = None
     print("")
 

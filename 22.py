@@ -6,4 +6,4 @@ print("a.", a)
 print("b. Sliced array: ", a[2:4])
 print("c. Iteration: ")
 for i in a:
-    print(i)
+    print(f"{i}, ", end="")
